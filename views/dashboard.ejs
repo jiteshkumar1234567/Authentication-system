@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Poppins",Arial;
+}
+
+body{
+  min-height:100vh;
+  background:radial-gradient(circle at top,#1f4037,#0f2027);
+  color:#fff;
+}
+
+/* NAVBAR */
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 80px;
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(15px);
+  box-shadow:0 10px 40px rgba(0,0,0,.5);
+}
+
+.logo{
+  font-size:24px;
+  font-weight:700;
+  letter-spacing:1px;
+  color:#7CFFCB;
+}
+
+.logout{
+  padding:12px 25px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(135deg,#ff512f,#dd2476);
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  box-shadow:0 5px 20px rgba(255,82,82,.6);
+  transition:.4s;
+}
+.logout:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 30px rgba(255,82,82,.9);
+}
+
+/* HERO SECTION */
+.hero{
+  height:90vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* BIG CARD */
+.card{
+  width:900px;
+  padding:50px 60px;
+  border-radius:28px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(25px);
+  box-shadow:0 30px 80px rgba(0,0,0,.6);
+  text-align:center;
+  animation:float 6s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+}
+
+.card h1{
+  font-size:38px;
+  margin-bottom:10px;
+  background:linear-gradient(90deg,#7CFFCB,#74EBD5);
+  -webkit-background-clip:text;
+  color:transparent;
+  white-space:nowrap;
+}
+
+.card p{
+  opacity:.85;
+  font-size:17px;
+  margin-bottom:40px;
+  white-space:nowrap;
+}
+
+/* FEATURES ROW */
+.features{
+  display:flex;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.feature{
+  flex:1;
+  padding:28px;
+  border-radius:18px;
+  background:linear-gradient(135deg,rgba(255,255,255,.18),rgba(255,255,255,.05));
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
+  transition:.4s;
+}
+
+.feature:hover{
+  transform:translateY(-8px) scale(1.05);
+  box-shadow:0 25px 60px rgba(0,0,0,.6);
+}
+
+.feature h3{
+  font-size:20px;
+  margin-bottom:8px;
+  color:#7CFFCB;
+}
+
+.feature span{
+  font-size:14px;
+  opacity:.8;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+  <div class="logo">⚡ AuthX Dashboard</div>
+  <a href="/auth/logout">
+  <button class="logout">Logout</button>
+</a>
+
+</div>
+
+<div class="hero">
+  <div class="card">
+    <h1>Welcome Back 🎉</h1>
+    <p>Your account is secure, verified and running smoothly.</p>
+
+    <div class="features">
+      <div class="feature">
+        <h3>🔐 Security</h3>
+        <span>JWT Protected</span>
+      </div>
+
+      <div class="feature">
+        <h3>📧 Email</h3>
+        <span>Verified</span>
+      </div>
+
+      <div class="feature">
+        <h3>🚀 Login</h3>
+        <span>Google + Manual</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
